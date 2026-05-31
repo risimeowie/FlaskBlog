@@ -114,3 +114,35 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ⭐ If you find this project useful, please consider giving it a star!
+
+
+## 🔌 Posts REST API (Added Feature)
+
+This feature was added as part of IT6 Final Drill. It exposes a REST API for managing blog posts with full CRUD operations.
+
+### API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/posts | Get all posts |
+| GET | /api/posts/<id> | Get single post |
+| POST | /api/posts | Create a post |
+| PUT | /api/posts/<id> | Update a post |
+| DELETE | /api/posts/<id> | Delete a post |
+
+### Example Request (Create Post)
+```json
+POST /api/posts
+{
+  "title": "My Post",
+  "content": "Hello world",
+  "author": "username",
+  "category": "general",
+  "tags": "flask, api"
+}
+```
+
+### Running API Tests
+```bash
+python -m pytest test_api.py -v --override-ini="addopts="
+```
