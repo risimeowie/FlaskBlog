@@ -132,10 +132,17 @@ This feature was added as part of IT6 Final Drill. It exposes a REST API for man
 
 ### Example Request (Create Post)
 ```json
-
+POST /api/posts
+{
+  "title": "My Post",
+  "content": "Hello world",
+  "author": "username",
+  "category": "general",
+  "tags": "flask, api"
+}
 ```
 
 ### Running API Tests
-```
-
+```bash
+python -m pytest test_api.py -v --override-ini="addopts="
 ```
